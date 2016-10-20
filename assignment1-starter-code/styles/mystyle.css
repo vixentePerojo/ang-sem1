@@ -1,0 +1,11 @@
+#greenone{
+  color: green;
+  border: 2px solid green;
+  padding-left: 15px;
+}
+
+#redone{
+  color:red;
+  border: 2px solid red;
+  padding-left: 15px;
+}
