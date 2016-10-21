@@ -9,3 +9,17 @@
   border: 2px solid red;
   padding-left: 15px;
 }
+
+#nota{
+  color:red;
+  font-size:1.3em;
+  font-weight: bold;
+}
+#titulo{
+  margin-left: -8px;
+}
+
+.form-group{
+  padding: 0;
+}
+#middlerow{border: 2px solid yellow;}

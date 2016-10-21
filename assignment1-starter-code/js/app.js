@@ -6,22 +6,31 @@
   function LunchCheckController($scope){
       $scope.countElements = function(){
         if($scope.elements!=undefined){
-          $scope.idMensaje="greenone";
-          var eltos = $scope.elements.split(',');
-          var sinVacios=eltos.length;
-          for(var i=0;i<eltos.length;i++)
-          {
-            if(eltos[i].length<=0){
-                sinVacios--;
-            }
+            $scope.idMensaje="greenone";
+            var eltos = $scope.elements.split(',');
+            var sinVacios=eltos.length;
+            if(sinVacios>0){
 
-          }
-          console.log(sinVacios);
-          if(sinVacios<=3){
-              $scope.finalMessage="Enjoy!";
+              for(var i=0;i<eltos.length;i++)
+              {
+                if(eltos[i].trim().length<=0){
+                    sinVacios--;
+                }
+              }
+              if(sinVacios<=0)
+              {
+                $scope.idMensaje="redone";
+                $scope.finalMessage="Please insert data first";
+              }
+              else if(sinVacios<=3){
+                  $scope.finalMessage="Enjoy!";
+              }
+              else {
+                $scope.finalMessage="Too much!";
+              }
           }
           else {
-            $scope.finalMessage="Too much!";
+
           }
         }
         else {
